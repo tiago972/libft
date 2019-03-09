@@ -1,5 +1,6 @@
 SRCS = ./srcs/ft_putchar.c ./srcs/ft_putstr.c ./srcs/ft_putnbr.c \
-	   ./srcs/ft_strcat.c ./srcs/ft_strlen.c ./srcs/ft_strdup.c
+	   ./srcs/ft_strcat.c ./srcs/ft_strlen.c ./srcs/ft_strdup.c \
+	   ./srcs/ft_strcmp.c
 INCL = ./includes
 CC = gcc 
 CFLAGS = -Wall -Wextra -Werror -I $(INCL)

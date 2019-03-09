@@ -9,5 +9,6 @@ char	*ft_strdup(char *str);
 int		ft_strlen(char	*str);
 void	ft_putnbr(int	nb);
 char	*ft_strcat(char	*dest, char *src);
+int		ft_strcmp(char *s1, char *s2);
 
 #endif
