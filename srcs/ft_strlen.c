@@ -1,13 +1,11 @@
 #include "../includes/libft.h"
 
-void	ft_putstr(char *str)
+int		ft_strlen(char *str)
 {
-	char *cpy;
+	char	*cpy;
 
 	cpy = str;
 	while (*cpy)
-	{
-		ft_putchar(*cpy);
 		cpy++;
-	}
+	return (cpy - str);
 }
