@@ -10,7 +10,7 @@ NAME = libft.a
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rc $(NAME) $<
+	ar rc $(NAME) $?
 	ranlib $(NAME)
 
 %.o : %.c
