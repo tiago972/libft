@@ -3,9 +3,7 @@
 
 int		main(int ac, char **av)
 {
-	char *cpy;
-
-	cpy = ft_strstr(av[1], av[2]);
-	printf("%s", cpy);
+	char *n = "\e06050";
+	printf("%d", ft_atoi(n));
 	return (0);
 }
