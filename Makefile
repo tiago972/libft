@@ -1,10 +1,13 @@
-SRCS = ./srcs/ft_putchar.c ./srcs/ft_putstr.c ./srcs/ft_putnbr.c \
-	   ./srcs/ft_strcat.c ./srcs/ft_strlen.c ./srcs/ft_strdup.c \
-	   ./srcs/ft_strcmp.c
-INCL = ./includes
 CC = gcc 
 CFLAGS = -Wall -Wextra -Werror -I $(INCL)
-OBJ = $(SRCS:.c=.o)
+OBJDIR = Objs
+SRCDIR = ./srcs/
+SRC = ft_putchar.c ft_putstr.c ft_putnbr.c \
+	   ft_strcat.c ft_strlen.c ft_strdup.c \
+	   ft_strcmp.c
+INCL = ./includes
+SRCS = $(addprefix $(SRCDIR)/, $(SRC))
+OBJ = $(addprefix $(OBJDIR)/, $(addsuffix .o, $(basename $(SRC))))
 NAME = libft.a
 
 all: $(NAME)
@@ -13,11 +16,13 @@ $(NAME): $(OBJ)
 	ar rc $(NAME) $?
 	ranlib $(NAME)
 
-%.o : %.c
+$(OBJDIR)/%.o : $(SRCDIR)/%.c
+	mkdir -p $(OBJDIR)
 	$(CC) -o $@ -c $< $(CFLAGS) 
 
 clean: 
 	rm -f $(OBJ)
+	rm -rf $(OBJDIR)
 
 fclean: clean
 	rm -f $(NAME)
