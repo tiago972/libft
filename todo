@@ -1,9 +1,4 @@
-memset 
-• bzero 
-• memcpy 
-• memccpy 
 • memmove 
-• memchr 
 • memcmp 
 • strcpy 
 • strncpy 
@@ -14,7 +9,6 @@ memset
 • strstr 
 • strnstr 
 • strncmp 
-• atoi 
 • isalpha 
 • isdigit 
 • isalnum 

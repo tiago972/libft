@@ -3,6 +3,10 @@
 
 int		main(int ac, char **av)
 {
-	ft_putstr(ft_strcat(av[1], av[2]));
+	char *cpy;
+
+	cpy = ft_strdup(av[1]);
+	ft_putstr(cpy);
+	free(cpy);
 	return (0);
 }
