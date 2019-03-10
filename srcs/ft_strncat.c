@@ -9,7 +9,7 @@ char	*ft_strncat(char *dest, char *src, size_t n)
 	cpysrc = src;
 	while (*cpydest)
 		cpydest++;
-	while (n--)
+	while (n-- && *cpysrc)
 		*cpydest++ = *cpysrc++;
 	*cpydest = '\0';
 	return (dest);

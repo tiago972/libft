@@ -12,7 +12,7 @@ char	*ft_strrchr(const char *s, int c)
 	if (*cpys == c)
 		return ((char*)cpys);
 	cpys--;
-	while (*cpys)
+	while (cpys - s >= 0)
 	{
 		if (*cpys == c)
 			return ((char*)cpys);

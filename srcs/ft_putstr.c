@@ -4,6 +4,8 @@ void	ft_putstr(char *str)
 {
 	char *cpy;
 
+	if (!str)
+		return ;
 	cpy = str;
 	while (*cpy)
 	{
