@@ -6,7 +6,7 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	int		j;
 
 	i = 0;
-	if (!needle)
+	if (*needle == '\0')
 		return ((char*)haystack);
 	while (*(haystack + i))
 	{
@@ -14,7 +14,7 @@ char	*ft_strstr(const char *haystack, const char *needle)
 		while (*(needle + j) && *(haystack + i + j) == *(needle + j))
 			j++;
 		if (!*(needle + j))
-			return ((char*)haystack + i + j - 1);
+			return ((char*)haystack + i);
 		i++;
 	}
 	return (NULL);
