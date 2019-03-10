@@ -1,19 +1,4 @@
-• memmove 
-• memcmp 
-• strcpy 
-• strncpy 
-• strncat 
 • strlcat 
-• strchr 
-• strrchr 
-• strstr 
-• strnstr 
-• strncmp 
-• isalpha 
-• isdigit 
-• isalnum 
-• isascii 
-• isprint 
 • toupper 
 • tolower
 ft_memalloc
