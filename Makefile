@@ -1,7 +1,7 @@
 CC = gcc 
 CFLAGS = -Wall -Wextra -Werror -I $(INCL)
 OBJDIR = Objs
-SRCDIR = ./srcs/
+SRCDIR = ./srcs
 SRC = ft_putchar.c ft_putstr.c ft_putnbr.c \
 	   ft_strcat.c ft_strlen.c ft_strdup.c \
 	   ft_strcmp.c
