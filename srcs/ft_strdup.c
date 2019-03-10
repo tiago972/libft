@@ -10,5 +10,6 @@ char	*ft_strdup(char *str)
 	res = cpy;
 	while (*str)
 		*cpy++ = *str++;
+	*cpy = '\0';
 	return (res);
 }

@@ -7,9 +7,14 @@ char	*ft_strncpy(char *dest, char *src, size_t n)
 
 	cpysrc = src;
 	cpydest = dest;
-	while (*cpysrc && n--)
-		*cpydest = *cpysrc++;
-	while (n--)
-		*cpydest = '\0';
+	while (n-- != 0)
+	{
+		if ((*cpydest++ = *cpysrc++) == 0)
+		{
+			while (n-- != 0)
+				*cpydest++ = '\0';
+			break ;
+		}
+	}
 	return (dest);
 }
