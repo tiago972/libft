@@ -23,6 +23,13 @@ void	*electric_alloc(size_t size)
 
 int		main(int ac, char **av)
 {
-    printf("long : min = %ld ; max = %ld.\n", LONG_MIN, LONG_MAX + 1);
+	
+	char src[] = "test basic du memccpy !";
+	char buff1[22];
+
+	__builtin___memset_chk (buff1, 0, sizeof(buff1), __builtin_object_size (buff1, 0));
+	char *r1 = memccpy(buff1, src, 'm', 22);
+	char *r2 = ft_memccpy(buff1, src, 'm', 22);
+	printf("S1 %s, S2 %s", r1, r2);
 	return (0);
 }
