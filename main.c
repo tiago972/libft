@@ -13,10 +13,6 @@ int		main()
 
 char		str[] = "Hello";
 
-	ft_striter(NULL, NULL);
-	ft_striter(str, NULL);
-	ft_striter(str, uf_striter_callback);
-	if (strcmp(str, "Ifmmp") != 0)
-		printf("?\n");
+	printf("%d\n", ft_strequ("", ""));	
 	return (1);
 }
