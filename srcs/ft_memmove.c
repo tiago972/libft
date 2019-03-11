@@ -4,6 +4,8 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 {
 	char		*cpydest;
 	const char	*cpysrc;
+	char		*lasts;
+	char		*lastd;
 
 	cpydest = (char*)dst;
 	cpysrc = (const char*)src;
@@ -12,10 +14,10 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 			*cpydest++ = *cpysrc++;
 	else
 	{
-		cpydest = (char*)dst + n - 1;
-		cpysrc = (const char*)src + n - 1;
+		lasts = (char*)cpysrc + (n - 1);
+		lastd = cpydest + (n - 1);
 		while (n--)
-			*cpydest++ = *cpysrc++;
+			*lastd-- = *lasts--;
 	}
 	return (dst);
 }
