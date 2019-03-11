@@ -4,7 +4,7 @@ void	ft_striter(char *s, void (*f)(char*))
 {
 	char	*cpy;
 
-	if (!s)
+	if (!s || !f)
 		return ;
 	cpy = s;
 	while (*cpy)
