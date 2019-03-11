@@ -22,14 +22,12 @@ void	*electric_alloc(size_t size)
 }
 
 int		main(int ac, char **av)
-{
+{	
+	char *test;
+	char test2[50] = " test ";
 	
-	char src[] = "test basic du memccpy !";
-	char buff1[22];
-
-	__builtin___memset_chk (buff1, 0, sizeof(buff1), __builtin_object_size (buff1, 0));
-	char *r1 = memccpy(buff1, src, 'm', 22);
-	char *r2 = ft_memccpy(buff1, src, 'm', 22);
-	printf("S1 %s, S2 %s", r1, r2);
+	test = ft_strtrim(test2);
+	printf("%s\n", test);
+	free(test);
 	return (0);
 }

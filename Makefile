@@ -1,6 +1,6 @@
 CC = gcc 
 CFLAGS = -Wall -Wextra -Werror -I $(INCL)
-OBJDIR = Objs
+OBJDIR = objs
 SRCDIR = ./srcs
 SRC = ft_putchar.c ft_putstr.c ft_putnbr.c \
 	   ft_strcat.c ft_strlen.c ft_strdup.c \
@@ -10,7 +10,13 @@ SRC = ft_putchar.c ft_putstr.c ft_putnbr.c \
 	   ft_strncpy.c ft_strncat.c ft_strchr.c \
 	   ft_strrchr.c ft_strstr.c ft_strnstr.c \
 	   ft_strncmp.c ft_isalpha.c ft_isdigit.c \
-	   ft_isalnum.c ft_isprint.c ft_isascii.c
+	   ft_isalnum.c ft_isprint.c ft_isascii.c \
+	   ft_memmove.c ft_strlcat.c ft_tolower.c \
+	   ft_toupper.c ft_memalloc.c ft_memdel.c \
+	   ft_strnew.c ft_strdel.c ft_strclr.c \
+	   ft_striter.c ft_striteri.c ft_strmap.c \
+	   ft_strmapi.c ft_strequ.c ft_strnequ.c \
+	   ft_strsub.c ft_strjoin.c ft_strtrim.c
 INCL = ./includes
 SRCS = $(addprefix $(SRCDIR)/, $(SRC))
 OBJ = $(addprefix $(OBJDIR)/, $(addsuffix .o, $(basename $(SRC))))
