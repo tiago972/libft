@@ -21,13 +21,18 @@ void	*electric_alloc(size_t size)
 	return (ptr + 4096 - size);
 }
 
-int		main(int ac, char **av)
+int		main()
 {	
-	char *test;
-	char test2[50] = " test ";
-	
-	test = ft_strtrim(test2);
-	printf("%s\n", test);
-	free(test);
+	int		i;
+	char *string = "      split       this for   me  !       ";
+	char **s = ft_strsplit(string, ' ');
+	ft_print_words_tables(s);
+	i = 0;
+	while (s[i])
+	{
+		free(s[i]);
+		i++;
+	}
+	free(s);
 	return (0);
 }
