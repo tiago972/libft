@@ -20,6 +20,10 @@ int		ft_atoi(char *str)
 	while (*cpy && *cpy >= '0' && *cpy <= '9')
 	{
 		res = res * 10 + *cpy - '0';
+		if (res < 0 && str[0] == '-')
+			return (0);
+		else if (res < 0)
+			return (-1);
 		cpy++;
 	}
 	return (res * sign);
