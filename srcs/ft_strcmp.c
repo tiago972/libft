@@ -6,6 +6,7 @@ int		ft_strcmp(char *s1, char *s2)
 	char			*cpys2;
 	unsigned char	c1;
 	unsigned char	c2;
+
 	cpys1 = s1;
 	cpys2 = s2;
 	while (*cpys1 || *cpys2)
