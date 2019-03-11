@@ -5,8 +5,12 @@
 #include <sys/mman.h>
 int		main(int ac, char **av)
 {	
-	if (ac < 2)
-		return (0);
-	printf("%s",ft_itoa(atoi(av[1])));
+
+	char src[] = "test basic du memccpy !";
+	char buff1[22];
+
+	char *r1 = memccpy(buff1, src, 'm', 22);
+	char *r2 = ft_memccpy(buff1, src, 'm', 22);
+	printf("s1 %s, s2 %s\n", r1, r2);
 	return (0);
 }
