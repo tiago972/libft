@@ -1,6 +1,6 @@
 #include "../includes/libft.h"
 
-void	ft_putstr(const char *str)
+void	ft_putstr_fd(const char *str, int fd)
 {
 	char *cpy;
 
@@ -9,7 +9,7 @@ void	ft_putstr(const char *str)
 	cpy = (char*)str;
 	while (*cpy)
 	{
-		ft_putchar(*cpy);
+		ft_putchar_fd(*cpy, fd);
 		cpy++;
 	}
 }

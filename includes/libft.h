@@ -5,7 +5,7 @@
 # include <unistd.h>
 # include <stdio.h>
 void		ft_putchar(char	c);
-void		ft_putstr(char	*str);
+void		ft_putstr(const char *str);
 char		*ft_strdup(char *str);
 size_t		ft_strlen(char	*str);
 void		ft_putnbr(int	nb);
@@ -51,5 +51,12 @@ char		*ft_strjoin(char const *s1,char const *s2);
 char		*ft_strtrim(char const *s);
 char		**ft_strsplit(const char *s1, char sep);
 void		ft_print_words_tables(char **s);
+char		*ft_itoa(int n);
+char		*ft_strrev(char *s);
+void		ft_putendl(char const *s);
+void		ft_putchar_fd(char c, int fd);
+void		ft_putstr_fd(char const *s, int fd);
+void		ft_putendl_fd(char const *s, int fd);
+void		ft_putnbr_fd(int n, int fd);
 
 #endif
