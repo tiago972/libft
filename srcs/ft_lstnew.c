@@ -9,11 +9,11 @@ t_list		*ft_lstnew(void const *content, size_t content_size)
 	if (!content)
 	{
 		new_elem->content = NULL;
-		new_elem->countent_size = 0;
+		new_elem->content_size = 0;
 	}
 	else
 	{
-		new_elem->content = content;
+		new_elem->content = (void*)content;
 		new_elem->content_size = content_size;
 	}
 	new_elem->next = NULL;

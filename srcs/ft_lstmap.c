@@ -9,8 +9,9 @@ t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 
 	if (!lst || !f)
 		return (NULL);
-	*begin_list = f(lst);
-	res = begin_list;
+	new_elem = f(lst);
+	begin_list = &new_elem;
+	res = *begin_list;
 	tmp = lst->next;
 	while (tmp->next)
 	{

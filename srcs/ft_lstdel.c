@@ -4,10 +4,10 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
 	t_list	*tmp;
 
-	while (*als)
+	while (*alst)
 	{
 		tmp = (*alst)->next;
-		del((*alst)->content, *(alst)->content_size);
+		del((*alst)->content, (*alst)->content_size);
 		free(*alst);
 		*alst = tmp;
 	}
