@@ -13,12 +13,8 @@ t_list		*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-<<<<<<< HEAD
 		new_elem->content = ft_memalloc(content_size);
 		new_elem->content = ft_memcpy(new_elem->content, content, content_size);
-=======
-		new_elem->content = (void*)content;
->>>>>>> 694b337f66332fe1a53b0663c44162d670cf91fe
 		new_elem->content_size = content_size;
 	}
 	new_elem->next = NULL;
