@@ -10,14 +10,12 @@ void			uf_striter_callback(char *s)
 
 int		main()
 {		
-	char	*str;
-	int ret = 0;
-	str = strdup("abc"); /* FIX un faux OK si l'user a mis "if s1 == s2 return 1;" */
-	if ((ret = ft_strequ("", "")) != 1)
-	{
-		printf("Error Line %d, Funct %s : \n\033[31mft_strequ(\"\", \"\").\nExpected ret = \"1\" \
-				but have ret = \"%d\"\033[0m\n", __LINE__ - 2, __func__, ret);
-	}
-	free(str);
+
+	char	buf2[] = "ozarabozaraboze123";
+
+
+	char *s1 = ft_strnstr(buf2, "ozaraboze", 15);
+	char *s2 = strnstr(buf2, "ozaraboze", 15);
+	printf("eux %s, moi %s\n", s2, s1);
 	return (1);
 }
