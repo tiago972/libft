@@ -6,7 +6,7 @@
 /*   By: edbaudou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 14:26:40 by edbaudou          #+#    #+#             */
-/*   Updated: 2019/04/01 14:27:41 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/01 16:14:46 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void				ft_lstadd(t_list **alst, t_list *new_elem);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				*ft_realloc(void *ptr, size_t new_size);
-void				ft_putchar_err(char c);
-void				ft_putstr_err(char *s);
+void				ft_putchar_err(const char c);
+void				ft_putstr_err(const char *s);
 
 #endif

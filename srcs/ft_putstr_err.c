@@ -6,13 +6,13 @@
 /*   By: edbaudou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:41:48 by edbaudou          #+#    #+#             */
-/*   Updated: 2019/04/01 13:41:50 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/01 16:12:38 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_putstr(const char *str)
+void	ft_putstr_err(const char *str)
 {
 	char *cpy;
 
