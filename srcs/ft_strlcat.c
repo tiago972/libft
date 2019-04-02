@@ -22,9 +22,9 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 	i = ft_strlen(dst);
 	j = ft_strlen(src);
 	s = src;
-	d = dst + i;
 	if (size <= i)
 		return (size + j);
+	d = dst + i;
 	while (size - 1 > i)
 	{
 		*d++ = *s++;
