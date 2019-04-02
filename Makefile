@@ -1,7 +1,5 @@
 CC = clang 
 CFLAGS = -Wall -Wextra -Werror -I $(INCL)
-OBJDIR = objs
-SRCDIR = ./srcs
 SRC = ft_putchar.c ft_putstr.c ft_putnbr.c \
 	   ft_strcat.c ft_strlen.c ft_strdup.c \
 	   ft_strcmp.c ft_atoi.c ft_memset.c \
@@ -24,8 +22,8 @@ SRC = ft_putchar.c ft_putstr.c ft_putnbr.c \
 	   ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 	   ft_realloc.c ft_putchar_err.c ft_putstr_err.c
 INCL = ./includes
-SRCS = $(addprefix $(SRCDIR)/, $(SRC))
-OBJ = $(addprefix $(OBJDIR)/, $(addsuffix .o, $(basename $(SRC))))
+SRCS =  $(SRC)
+OBJ = $(addsuffix .o, $(basename $(SRC)))
 NAME = libft.a
 
 all: $(NAME)
