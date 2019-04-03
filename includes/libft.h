@@ -15,7 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
+# include <string.h>
 
 void				ft_putchar(char	c);
 void				ft_putstr(const char *str);
